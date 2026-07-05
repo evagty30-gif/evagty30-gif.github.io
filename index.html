@@ -6,15 +6,16 @@
     <title>Portfolio Data Analyst | @evagty30-gif</title>
     <style>
         :root {
-            --bg-color: #1a101e;
-            --card-bg: #2d1b33;
-            --card-hover: #3d2645;
-            --text-main: #f8fafc;
-            --text-muted: #cbd5e1;
+            --bg-color: #faf6f8;
+            --card-bg: #ffffff;
+            --card-hover: #fdfafc;
+            --text-main: #2d1b33;
+            --text-muted: #64748b;
             --accent: #da7f8f;
-            --accent-hover: #e195a3;
-            --border: #442a4e;
-            --file-bg: #150c18;
+            --accent-hover: #c96c7c;
+            --border: #e8dbe5;
+            --file-bg: #f5edf2;
+            --readme-bg: #fcf8fa;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,6 +59,7 @@
             border-radius: 12px;
             padding: 25px;
             margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .bio-box h3 {
@@ -85,9 +87,10 @@
         }
 
         .skills-list h4 {
-            color: var(--accent);
+            color: var(--text-main);
             margin-bottom: 10px;
             font-size: 1rem;
+            font-weight: 700;
         }
 
         .skills-list ul {
@@ -97,7 +100,7 @@
 
         .skills-list li {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: var(--text-main);
             margin-bottom: 5px;
             display: flex;
             align-items: center;
@@ -105,7 +108,7 @@
         }
 
         .skills-list li::before {
-            content: "▹";
+            content: "➔";
             color: var(--accent);
         }
 
@@ -115,7 +118,7 @@
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
 
         .repo-header {
@@ -136,7 +139,7 @@
 
         .repo-link {
             background-color: var(--accent);
-            color: var(--file-bg);
+            color: white;
             padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
@@ -149,10 +152,28 @@
             background-color: var(--accent-hover);
         }
 
-        .repo-desc {
-            color: var(--text-muted);
-            margin-bottom: 25px;
-            font-size: 1rem;
+        .readme-block {
+            background-color: var(--readme-bg);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .readme-block h3 {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+            padding-bottom: 4px;
+        }
+
+        .readme-block ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
         }
 
         .files-grid {
@@ -162,7 +183,7 @@
         }
 
         .project-block {
-            background-color: rgba(21, 12, 24, 0.4);
+            background-color: #faf8fa;
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 20px;
@@ -201,7 +222,7 @@
         }
 
         .file-box {
-            background-color: var(--file-bg);
+            background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 15px;
@@ -211,6 +232,7 @@
             transition: transform 0.2s, border-color 0.2s, background-color 0.2s;
             text-decoration: none;
             color: inherit;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .file-box:hover {
@@ -277,7 +299,7 @@
 
         <div class="bio-box">
             <h3>Mon Profil</h3>
-            <p>Après deux années de formation en tant que Data Analyst, je peux aujourd'hui affirmer mon profil de Data Analyst polyvalente. Au cours de cette formation, j'ai acquis des compétences techniques et méthodologiques me permettant d'accompagner les utilisateurs, qu'ils soient clients internes ou externes, dans l'exploitation de leurs données. Je peux intervenir à chaque étape d'un projet d'analyse de données : de la compréhension des besoins métiers à la création de tableaux de bord et de visualisations claires, pertinentes et accessibles.</p>
+            <p>Après deux années de formation en tant que Data Analyst, je peux aujourd'hui affirmer mon profil de Data Analyst polyvalente. Au cours de cette formation, j'ai acquis des compétences techniques et métallurgiques me permettant d'accompagner les utilisateurs, qu'ils soient clients internes ou externes, dans l'exploitation de leurs données. Je peux intervenir à chaque étape d'un projet d'analyse de données : de la compréhension des besoins métiers à la création de tableaux de bord et de visualisations claires, pertinentes et accessibles.</p>
             
             <div class="skills-container">
                 <div class="skills-list">
@@ -303,17 +325,47 @@
             </div>
         </div>
 
-        <!-- ============== DÉPÔT 1 ============== -->
         <section class="repo-section">
             <div class="repo-header">
                 <h2 class="repo-title">📁 Formation Openclassrooms : ensemble des projets</h2>
                 <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io" target="_blank" class="repo-link">Dépôt GitHub ↗</a>
             </div>
-            <p class="repo-desc">Ensemble des projets réalisés au cours de la formation certifiante de Data Analyst. Retrouvez ci-dessous la documentation exhaustive associée à chaque projet.</p>
+
+            <div class="readme-block">
+                <p><strong>📄 Fichier README.md du dépôt :</strong></p>
+                <p style="margin-top: 10px;">Vous êtes actuellement sur le repository regroupant l'ensemble des projets openclassrooms réalisés lors de la formation Openclassrooms Data Analyst.</p>
+                
+                <h3>Compétences - Soft skills développées</h3>
+                <ul>
+                    <li>Analyse de ses compétences</li>
+                    <li>Point sur ses axes d'amélioration</li>
+                    <li>S'adapter à l'utilisateur pour favoriser l'accessibilité</li>
+                    <li>Communication et relationnel</li>
+                    <li>Apprendre un nouveau langage informatique</li>
+                    <li>Simplifier les techniques pour faciliter la compréhension des utilisateurs</li>
+                    <li>Timer et anticiper les ressources nécessaires pour le projet</li>
+                </ul>
+
+                <h3>Compétences - Hard skills développées</h3>
+                <ul>
+                    <li>Auto-évaluation</li>
+                    <li>Tableaux croisés dynamiques et formules</li>
+                    <li>Création base de données, documentation, schéma relationnel</li>
+                    <li>Requête de bases de données</li>
+                    <li>Python langage et bibliothèques</li>
+                    <li>Collecte, analyse, nettoyage et traitement base de données</li>
+                    <li>Maîtrise du RGPD</li>
+                    <li>Réalisation d'un tableau de bord</li>
+                    <li>Assurer l'accessibilité d'un rapport</li>
+                    <li>Storytelling via de la visualisation</li>
+                    <li>Réalisation d'un workflow</li>
+                    <li>Statistiques descriptives, uni, bi et multivariées</li>
+                    <li>Modèles statistiques</li>
+                </ul>
+            </div>
             
             <div class="files-grid">
                 
-                <!-- P1 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🚀</span>
@@ -346,7 +398,6 @@
                     </div>
                 </div>
 
-                <!-- P2 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🛒</span>
@@ -363,13 +414,12 @@
                     </div>
                 </div>
 
-                <!-- P3 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">💾</span>
                         <div>
                             <div class="project-name">Projet 3 : Requêtage de base de données SQL</div>
-                            <span class="project-type">4 Livrabes disponibles</span>
+                            <span class="project-type">4 Livrables disponibles</span>
                         </div>
                     </div>
                     <div class="sub-grid">
@@ -392,7 +442,6 @@
                     </div>
                 </div>
 
-                <!-- P4 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🐍</span>
@@ -403,7 +452,7 @@
                     </div>
                     <div class="sub-grid">
                         <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P4_realisez-une-etude-de-sante-publique-avec-r-ou-python-1_2025-01-18T171749%202/Genty_Eva_1_notebook_012025%C2%A0" target="_blank" class="file-box">
-                            <div class="file-info-mini"><span class="file-icon-mini">⚙️</span><div><div class="file-name-mini">Notebook Python d'Analyse</div><span class="file-type-mini">Fichier</span></div></div>
+                            <div class="file-info-mini"><span class="file-icon-mini">🐍</span><div><div class="file-name-mini">Notebook Python d'Analyse</div><span class="file-type-mini">Script</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
                         <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P4_realisez-une-etude-de-sante-publique-avec-r-ou-python-1_2025-01-18T171749%202/Genty_Eva_2_notebook-pdf_012025.pdf" target="_blank" class="file-box">
@@ -417,7 +466,6 @@
                     </div>
                 </div>
 
-                <!-- P5 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🏢</span>
@@ -438,7 +486,6 @@
                     </div>
                 </div>
 
-                <!-- P6 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">📈</span>
@@ -459,7 +506,6 @@
                     </div>
                 </div>
 
-                <!-- P7 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">📊</span>
@@ -476,7 +522,6 @@
                     </div>
                 </div>
 
-                <!-- P8 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">⚙️</span>
@@ -501,7 +546,6 @@
                     </div>
                 </div>
 
-                <!-- P9 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">📚</span>
@@ -526,7 +570,6 @@
                     </div>
                 </div>
 
-                <!-- P10 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🚰</span>
@@ -547,7 +590,6 @@
                     </div>
                 </div>
 
-                <!-- P11 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🗺️</span>
@@ -572,7 +614,6 @@
                     </div>
                 </div>
 
-                <!-- P12 -->
                 <div class="project-block">
                     <div class="project-header">
                         <span class="project-icon">🔍</span>
@@ -595,7 +636,7 @@
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
                         <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P12_detectez-des-faux-billets-avec-r-ou-python-1_2026-03-22T211347/genty_eva_2_application_032026-2.py" target="_blank" class="file-box">
-                            <div class="file-info-mini"><span class="file-icon-mini">💻</span><div><div class="file-name-mini">Script Application Finale (Python)</div><span class="file-type-mini">Script Python</span></div></div>
+                            <div class="file-info-mini"><span class="file-icon-mini">💻</span><div><div class="file-name-mini">Script Application Finale (Python)</div><span class="file-type-mini">Script</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
                     </div>
@@ -604,13 +645,46 @@
             </div>
         </section>
 
-        <!-- ============== DÉPÔT 2 ============== -->
         <section class="repo-section">
             <div class="repo-header">
                 <h2 class="repo-title">📁 Projet 13 : Environnement décisionnel Aeroworld</h2>
                 <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld" target="_blank" class="repo-link">Dépôt GitHub ↗</a>
             </div>
-            <p class="repo-desc">Projet de fin d'études : Conception globale d'une infrastructure BI et d'un environnement d'analyse de données pour la marque Aeroworld.</p>
+
+            <div class="readme-block">
+                <p><strong>📄 Fichier README.md du dépôt :</strong></p>
+                <p style="margin-top: 10px;">Vous êtes actuellement sur le repository regroupant l'ensemble des projets Aeroworld réalisés sur le projet 13 de la formation Openclassrooms Data Analyst.</p>
+                
+                <h3>Mon profil</h3>
+                <p>Après deux années de formation en tant que Data Analyst, je peux aujourd'hui affirmer mon profil de Data Analyst polyvalente.</p>
+                <p>Au cours de cette formation, j'ai acquis des compétences techniques et méthodologiques me permettant d'accompagner les utilisateurs, qu'ils soient clients internes ou externes, dans l'exploitation de leurs données.</p>
+                <p>Je peux intervenir à chaque étape d'un projet d'analyse de données : de la compréhension des besoins métiers et de l'identification des problématiques, à la collecte, au traitement et à l'analyse des données, jusqu'à la création de tableaux de bord et de visualisations claires, pertinentes et accessibles (facilement utilisables par les utilisateurs).</p>
+                <p>Grâce à la maîtrise d'outils d'analyse, de requêtage, de traitement de données et de datavisualisation, je transforme les données brutes en informations exploitables afin d'aider chaque membre de l'entreprise à prendre des décisions stratégiques, avisées et fondées sur des indicateurs fiables.</p>
+                <p>J'apprécie particulièrement mettre à profit mes compétences développées avant cette formation dans les domaines du conseil et du commerce pour les exploiter d'un point de vue plus technique. Ma rigueur, mon esprit "problem-solver" et mon relationnel sont des compétences que je souhaite mettre à profit dans ma future mission.</p>
+
+                <h3>Compétences - Soft skills développées</h3>
+                <ul>
+                    <li>Synthétiser et présenter son parcours</li>
+                    <li>Pitcher ses compétences</li>
+                    <li>Présenter son profil, des rendus professionnels et un outil de data visualisation à travers une présentation orale et écrite</li>
+                    <li>Communication et relationnel</li>
+                    <li>Simplifier les techniques pour faciliter la compréhension des utilisateurs</li>
+                    <li>Timer et anticiper les ressources nécessaires pour le projet</li>
+                </ul>
+
+                <h3>Compétences - Hard skills développées</h3>
+                <ul>
+                    <li>Création base de données, documentation, schéma relationnel</li>
+                    <li>Collecte, analyse, nettoyage et traitement base de données</li>
+                    <li>Maîtrise du RGPD</li>
+                    <li>Analyse et traitement base de données</li>
+                    <li>Réalisation d'un tableau de bord</li>
+                    <li>Assurer l'accessibilité d'un rapport</li>
+                    <li>Storytelling via de la visualisation</li>
+                    <li>Créer de la documentation et des outils d'apprentissage</li>
+                    <li>Utilisation de GitHub</li>
+                </ul>
+            </div>
             
             <div class="files-grid">
                 
@@ -619,66 +693,56 @@
                         <span class="project-icon">💎</span>
                         <div>
                             <div class="project-name">Livrables de Synthèse Finale & Pilotage</div>
-                            <span class="project-type">9 Fichiers opérationnels</span>
+                            <span class="project-type">10 Fichiers opérationnels</span>
                         </div>
                     </div>
                     <div class="sub-grid">
                         
-                        <!-- Cahier des charges -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Cahier_des_charges_fonctionnel.pptx.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📋</span><div><div class="file-name-mini">Cahier des charges fonctionnel</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Analyse des besoins -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Analyse_des_besoins_m%C3%A9tiers.docx.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">🎯</span><div><div class="file-name-mini">Analyse des besoins métiers</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Gantt PDF -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Gantt%20Projet%2013%20Data%20Analyst%20Eva%20Genty.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📅</span><div><div class="file-name-mini">Planification Gantt (Rapport)</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Gantt PBIX -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Gantt%20Projet%2013%20Data%20Analyst%20Eva%20Genty.pbix" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📊</span><div><div class="file-name-mini">Suivi de projet dynamique Gantt</div><span class="file-type-mini">Power BI</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Profil PDF -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Profil_Data_Analyst.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📄</span><div><div class="file-name-mini">Analyse Profil (Maquette)</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Profil PBIX -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Profil_Data_Analyst.pbix" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📊</span><div><div class="file-name-mini">Tableau de Bord Métier : Profil</div><span class="file-type-mini">Power BI</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Veille PDF -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Veille%20Projet%2013.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📄</span><div><div class="file-name-mini">Étude de Veille Technologique</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Veille PBIX -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Veille%20Projet%2013.pbix" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📊</span><div><div class="file-name-mini">Tableau de Bord : Suivi Veille</div><span class="file-type-mini">Power BI</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Guide Graphiques -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Guide%2Bincomplet%2Bde%2Bcr%C3%A9ation%2Bde%2Bgraphiques%2Bavec%2BTableau%2BSoftware.docx.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📝</span><div><div class="file-name-mini">Guide Dataviz (Tableau Software)</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Vidéo MP4 -->
                         <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/D%C3%A9couvrir%2BPower%2BBI%2C%2Bimporter%2Bet%2Bvisualiser%2Bdes%2Bdonn%C3%A9es.mp4" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">🎥</span><div><div class="file-name-mini">Vidéo de Formation Utilisateurs</div><span class="file-type-mini">Vidéo MP4</span></div></div>
                             <div class="view-action">Regarder la vidéo &rarr;</div>
