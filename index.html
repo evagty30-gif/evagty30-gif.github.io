@@ -16,6 +16,9 @@
             --border: #e8dbe5;
             --file-bg: #f5edf2;
             --readme-bg: #fcf8fa;
+            --warning-bg: #fff1f2;
+            --warning-border: #fecdd3;
+            --warning-text: #9f1239;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,12 +28,31 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 20px 20px 40px 20px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        /* Style du message d'avertissement */
+        .warning-banner {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning-text);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .warning-icon {
+            font-size: 1.4rem;
         }
 
         header {
@@ -193,6 +215,7 @@
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
 
         .project-icon {
@@ -290,6 +313,14 @@
 
     <div class="container">
         
+        <!-- Bandeau d'information / Warning -->
+        <div class="warning-banner">
+            <span class="warning-icon">💡</span>
+            <div>
+                <strong>Conseil de navigation :</strong> Si un fichier volumineux ou spécial (comme un script ou un fichier lourd) ne se charge pas directement sur GitHub, rechargez simplement la page de votre navigateur ou cliquez sur le bouton <strong>"View Raw"</strong> sur l'interface de GitHub pour le télécharger ou l'afficher directement.
+            </div>
+        </div>
+
         <header>
             <h1>Eva Gty</h1>
             <div class="subtitle">Data Analyst Polyvalente</div>
@@ -331,7 +362,6 @@
                 <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io" target="_blank" class="repo-link">Dépôt GitHub ↗</a>
             </div>
 
-            <!-- Intégration du README Dépot 1 -->
             <div class="readme-block">
                 <p><strong>📄 Fichier README.md du dépôt :</strong></p>
                 <p style="margin-top: 10px;">Vous êtes actuellement sur le repository regroupant l'ensemble des projets openclassrooms réalisés lors de la formation Openclassrooms Data Analyst.</p>
@@ -393,7 +423,7 @@
                             <div class="file-info-mini"><span class="file-icon-mini">📊</span><div><div class="file-name-mini">Grille auto-évaluation v2</div><span class="file-type-mini">Excel</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
-                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P1_prenez-en-main-votre-formation-de-data-analyst_2024-09-15T191202/%F0%9F%97%BA%20Skill%20mapping.pdf" target="_blank" class="file-box">
+                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P1_prenez-en-main-votre-formation-de-data-analyst_2024-09-15T191202/Genty_Eva_3_grille_auto_evaluation_MAJ042026.xlsx%20-%20%F0%9F%97%BA%20Skill%20mapping.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">🗺️</span><div><div class="file-name-mini">Skill mapping</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
@@ -435,8 +465,8 @@
                             <div class="file-info-mini"><span class="file-icon-mini">📄</span><div><div class="file-name-mini">Liste des livrables</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
-                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P3_requetez-une-base-de-donnees-avec-sql-1_2024-11-08T142327/Genty_Eva_3_m%C3%A9thodologie_112024.pdf" target="_blank" class="file-box">
-                            <div class="file-info-mini"><span class="file-icon-mini">📄</span><div><div class="file-name-mini">Méthodologie d'analyse</div><span class="file-type-mini">PDF</span></div></div>
+                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P3_requetez-une-base-de-donnees-avec-sql-1_2024-11-08T142327/Genty_Eva_3_me%CC%81thodologie_112024.pdf" target="_blank" class="file-box">
+                            <div class="file-info-mini"><span class="file-icon-mini">📄</span><div><div class="file-name-mini">Méthodologie</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
                         <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P3_requetez-une-base-de-donnees-avec-sql-1_2024-11-08T142327/Genty_Eva_4_grille_112024.pdf" target="_blank" class="file-box">
@@ -456,8 +486,8 @@
                         </div>
                     </div>
                     <div class="sub-grid">
-                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P4_realisez-une-etude-de-sante-publique-avec-r-ou-python-1_2025-01-18T171749%202/Genty_Eva_1_notebook_012025%C2%A0" target="_blank" class="file-box">
-                            <div class="file-info-mini"><span class="file-icon-mini">🐍</span><div><div class="file-name-mini">Notebook Python d'Analyse</div><span class="file-type-mini">Script</span></div></div>
+                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P4_realisez-une-etude-de-sante-publique-avec-r-ou-python-1_2025-01-18T171749%202/Genty_Eva_1_notebook_012025%20" target="_blank" class="file-box">
+                            <div class="file-info-mini"><span class="file-icon-mini">🐍</span><div><div class="file-name-mini">Notebook Python format Notebook</div><span class="file-type-mini">Script</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
                         <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P4_realisez-une-etude-de-sante-publique-avec-r-ou-python-1_2025-01-18T171749%202/Genty_Eva_2_notebook-pdf_012025.pdf" target="_blank" class="file-box">
@@ -523,7 +553,7 @@
                         </div>
                     </div>
                     <div class="sub-grid">
-                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P7_Cr%C3%A9ez_un_tableau_de_bord_dynamique_avec_Power_BI_Genty_Eva_n%C2%B0%20Projet7_RapportPowerBI_052025.pbix%203" target="_blank" class="file-box">
+                        <a href="https://github.com/evagty30-gif/EvaGty_Portofolio_Data_Analyst_Projets_Formation.github.io/blob/main/EG_P7_Cre%CC%81ez_un_tableau_de_bord_dynamique_avec_Power_BI_Genty_Eva_n%C2%B0%20Projet7_RapportPowerBI_052025.pbix%203" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">📈</span><div><div class="file-name-mini">Rapport d'analyse Power BI</div><span class="file-type-mini">Power BI</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
@@ -665,7 +695,6 @@
                 <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld" target="_blank" class="repo-link">Dépôt GitHub ↗</a>
             </div>
 
-            <!-- Intégration du README Dépot 2 -->
             <div class="readme-block">
                 <p><strong>📄 Fichier README.md du dépôt :</strong></p>
                 <p style="margin-top: 10px;">Vous êtes actuellement sur le repository regroupant l'ensemble des projets Aeroworld réalisés sur le projet 13 de la formation Openclassrooms Data Analyst.</p>
@@ -720,7 +749,7 @@
                         </a>
 
                         <!-- Analyse des besoins -->
-                        <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Analyse_des_besoins_m%C3%A9tiers.docx.pdf" target="_blank" class="file-box">
+                        <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Analyse_des_besoins_me%CC%81tiers.docx.pdf" target="_blank" class="file-box">
                             <div class="file-info-mini"><span class="file-icon-mini">🎯</span><div><div class="file-name-mini">Analyse des besoins métiers</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
@@ -761,9 +790,9 @@
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
-                        <!-- Guide Graphiques -->
-                        <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Guide%20incomplet%20de%20cre%CC%81ation%20de%20graphiques%20avec%20Tableau%20Software.docx.pdf" target="_blank" class="file-box">
-                            <div class="file-info-mini"><span class="file-icon-mini">📝</span><div><div class="file-name-mini">Guide Dataviz (Tableau Software)</div><span class="file-type-mini">PDF</span></div></div>
+                        <!-- Guide pas à pas Power BI -->
+                        <a href="https://github.com/evagty30-gif/PortofolioOpenclassrooms_Data_Analyst_Projets_Aeroworld/blob/main/Guide%2Bincomplet%2Bde%2Bcre%CC%81ation%2Bde%2Bgraphiques%2Bavec%2BTableau%2BSoftware.docx.pdf" target="_blank" class="file-box">
+                            <div class="file-info-mini"><span class="file-icon-mini">📝</span><div><div class="file-name-mini">Guide pas à pas Power BI</div><span class="file-type-mini">PDF</span></div></div>
                             <div class="view-action">Ouvrir le fichier &rarr;</div>
                         </a>
 
